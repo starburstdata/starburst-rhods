@@ -1,8 +1,10 @@
 # What is Starburst?
 Starburst is the enterprise offering of Trino, which is an open source, ANSI SQL MPP query engine.  With Starburst, users can quickly and easily query all of their data through a single point of access.  Through this single point of access, users can combine data from multiple sources in a single query no matter where there data lives (on-prem, hybrid, cloud, multi-cloud).  Additionally, Starburst delivers very fast performance against data lakes giving users the ability to query those sources using ANSI SQL without sacrificing performance.  As a result, users will be able to derive insights from all of their data faster than ever before because they no longer need to wait on data pipelines to consolidate all of the data into a single source.
 
-![Starburst Overview - YouTube](https://www.youtube.com/watch?v=N4jBg9pg7NU)
-![Starburst Overview](images/StarburstOverview.png)
+![Starburst Overview - YouTube]
+(https://img.youtube.com/vi/N4jBg9pg7NU/maxresdefault.jpg)
+(https://www.youtube.com/watch?v=N4jBg9pg7NU)
+(images/StarburstOverview.png)
 
 
 # Where does Starburst fit?
