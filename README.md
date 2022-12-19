@@ -37,4 +37,4 @@ Starburst Galaxy is the fully managed offering and can be deployed in AWS, Azure
 
 Thanks to Starburst’s ability to process the query in parallel, it’s able to return these results back to users in less time.
 
-![Starburst on OpenShift](images/Starburst OpenShift Arch.jpg)
+![Starburst on OpenShift](images/StarburstOpenShiftArch.jpg)
