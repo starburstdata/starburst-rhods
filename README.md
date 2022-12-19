@@ -19,7 +19,8 @@ Starburst Enterprise is the self-managed offering and supports on-prem, hybrid, 
 
 Starburst Galaxy is the fully managed offering and can be deployed in AWS, Azure and Google Cloud.  There is currently a RHODS add-on available for Starburst Galaxy.
 
-
+Marketplace Listing:  https://marketplace.redhat.com/en-us/products/starburst-enterprise
+![Red Hat Marketplace Listing](images/MarketplaceListing.png)
 
 
 # How are queries processed by Starburst?
