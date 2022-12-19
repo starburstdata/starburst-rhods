@@ -3,10 +3,14 @@ Starburst is the enterprise offering of Trino, which is an open source, ANSI SQL
 
 [Starburst Overview](https://www.youtube.com/watch?v=N4jBg9pg7NU)
 
+
+
 # Where does Starburst fit?
 Starburst sits in between data consumers and all of the data they need to access.  Instead of connecting to each data source invidually or developing complex data pipelines to consolidate data into a single source, users connect directly to Starburst.  Starburst is built on the ANSI SQL standard, so users will be able to leverage their existing queries and tools when connecting Starburst.  Starburst will take care of securely reaching out to each data source and combining the data into a single result set so that users can focus on deriving insights and not spend their time trying to get access to the data they need.
 
-!(../images/StarburstConsumptionLayer.jpg)
+![Starburst - Data Ecosystem](../images/StarburstConsumptionLayer.jpg)
+
+
 
 # How is Starburst deployed?
 Starburst has two main offerings:  Starburst Enterprise and Starburst Galaxy
@@ -14,6 +18,8 @@ Starburst has two main offerings:  Starburst Enterprise and Starburst Galaxy
 Starburst Enterprise is the self-managed offering and supports on-prem, hybrid, cloud and multi-cloud deployments.  While it can be deployed on bare metal, customers typically deploy Starburst Enterprise in a Kubernetes environment.  Starburst Enterprise provides a Helm-based operator in the Red Hat Marketplace or can be deployed manually using Helm charts.
 
 Starburst Galaxy is the fully managed offering and can be deployed in AWS, Azure and Google Cloud.  There is currently a RHODS add-on available for Starburst Galaxy.
+
+
 
 
 # How are queries processed by Starburst?
@@ -31,4 +37,4 @@ Starburst Galaxy is the fully managed offering and can be deployed in AWS, Azure
 
 Thanks to Starburst’s ability to process the query in parallel, it’s able to return these results back to users in less time.
 
-!(../images/Starburst OpenShift Arch.jpg)
+![Starburst on OpenShift](../images/Starburst OpenShift Arch.jpg)
