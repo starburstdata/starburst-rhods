@@ -5,14 +5,14 @@ Check out this overview from YouTube for more info!
 
 [![Starburst Overview](https://img.youtube.com/vi/N4jBg9pg7NU/maxresdefault.jpg)](https://www.youtube.com/watch?v=N4jBg9pg7NU)
 
-
+#
 # Where does Starburst fit?
 Starburst sits in between data consumers and all of the data they need to access.  Instead of connecting to each data source invidually or developing complex data pipelines to consolidate data into a single source, users connect directly to Starburst.  Starburst is built on the ANSI SQL standard, so users will be able to leverage their existing queries and tools when connecting Starburst.  Starburst will take care of securely reaching out to each data source and combining the data into a single result set so that users can focus on deriving insights and not spend their time trying to get access to the data they need.
 
-![Starburst - Data Ecosystem](images/StarburstConsumptionLayer.jpg)
+![Starburst - Data Ecosystem](images/sb_consumption_layer.png)
 
 
-
+#
 # How is Starburst deployed?
 Starburst has two main offerings:  Starburst Enterprise and Starburst Galaxy
 
@@ -21,9 +21,9 @@ Starburst Enterprise is the self-managed offering and supports on-prem, hybrid, 
 Starburst Galaxy is the fully managed offering and can be deployed in AWS, Azure and Google Cloud.  There is currently a RHODS add-on available for Starburst Galaxy.
 
 Marketplace Listing:  https://marketplace.redhat.com/en-us/products/starburst-enterprise
-![Red Hat Marketplace Listing](images/MarketplaceListing.png)
+![Red Hat Marketplace Listing](images/rh_marketplace_listing.png)
 
-
+#
 # How are queries processed by Starburst?
 1. Data consumers connect directly to Starburst with Tableau
 2. Queries are sent to the Starburst coordinator node for processing.  
@@ -39,4 +39,4 @@ Marketplace Listing:  https://marketplace.redhat.com/en-us/products/starburst-en
 
 Thanks to Starburst’s ability to process the query in parallel, it’s able to return these results back to users in less time.
 
-![Starburst on OpenShift](images/StarburstOpenShiftArch.jpg)
+![Starburst on OpenShift](images/sb_openshift_arch.png)
