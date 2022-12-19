@@ -6,7 +6,7 @@ The Starburst Enterprise web UI provides an easy way for you to monitor resource
 
 By default, your environment will point you to the Trino web UI (shown below) when you click on the route that has been created in OpenShift.  To access the Starburst Enterprise web UI, first login with any userid of your choosing (no password required).  
 
-![Trino web UI login](https://github.com/starburstdata/starburst-rhpds/tree/main/images/trino_webui_login.png)
+![Trino web UI login](../images/trino_webui_login.png)
 
 Once you are logged in, you will see the interface pictured below (your version # and URL may be different).
 
