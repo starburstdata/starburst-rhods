@@ -68,7 +68,7 @@ CREATE SCHEMA hive.sep_demo WITH (location = 's3:/XXX/XXX');
 ````
 
 
-Now that the schema exists, you can start copying over the TPCH tables. Execute the SQL statements below from the **Query Editor** page in the Starburst Enterprise web UI to copy the tables.
+Now that the schema exists, you can start copying over the TPCH tables using standard ANSI SQL.
 ````
 CREATE TABLE hive.sep_demo.customer AS SELECT * FROM tpch.sf10.customer;
 CREATE TABLE hive.sep_demo.lineitem AS SELECT * FROM tpch.sf10.lineitem;
@@ -81,7 +81,7 @@ CREATE TABLE hive.sep_demo.supplier AS SELECT * FROM tpch.sf10.supplier;
 ````
 
 
-You now have the same data in both the “hive” and “tpch” catalogs. To join data between the 2 catalogs, all you need to do is specify the schema and table name for each table in your FROM clause. An example query is shown below.  Please note that when running queries through Starburst, it is recommended to include the full path to the table (i.e. <catalog>.<schema>.<table>) so that you can query across catalogs.
+You now have the same data in both the “hive” and “tpch” catalogs. To join data between the 2 catalogs, all you need to do is specify the schema and table name for each table in your FROM clause. An example query is shown below.  Please note that when running queries through Starburst, it is recommended to include the full path to the table (i.e. \<catalog\>.\<schema\>.\<table\>) so that you can query across catalogs.
 ````
 SELECT c.cust_key, c.name, c.nationkey, n.name
 FROM hive.sep_demo.customer c
