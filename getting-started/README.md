@@ -62,13 +62,13 @@ From the **Query Editor** page in the Starburst Enterprise web UI, run the follo
 ![Starburst Data Copy SQL](../images/sep_data_queries.png)
 
 
-To copy data from the TPCH data source into a new data source, you first need to create a schema in the destination data source to store the data.  Below is an example of copying data from TPCH into an S3 bucket using Starburst's Hive connector.  The location you specify will correspond to the object storage location where the data will be written.  In this example, it is an S3 bucket.  Please note that the "WITH location" property is only required when using the Hive, Iceberg or Deltalake connectors.  For all other data sources, follow the standard procedures for creating a schema in that data source.
+(1) To copy data from the TPCH data source into a new data source, you first need to create a schema in the destination data source to store the data.  Below is an example of copying data from TPCH into an S3 bucket using Starburst's Hive connector.  The location you specify will correspond to the object storage location where the data will be written.  In this example, it is an S3 bucket.  Please note that the "WITH location" property is only required when using the Hive, Iceberg or Deltalake connectors.  For all other data sources, follow the standard procedures for creating a schema in that data source.
 ````
 CREATE SCHEMA hive.sep_demo WITH (location = 's3:/XXX/XXX');
 ````
 
 
-Now that the schema exists, you can start copying over the TPCH tables using standard ANSI SQL.
+(2) Now that the schema exists, you can start copying over the TPCH tables using standard ANSI SQL.
 ````
 CREATE TABLE hive.sep_demo.customer AS SELECT * FROM tpch.sf10.customer;
 CREATE TABLE hive.sep_demo.lineitem AS SELECT * FROM tpch.sf10.lineitem;
@@ -81,7 +81,7 @@ CREATE TABLE hive.sep_demo.supplier AS SELECT * FROM tpch.sf10.supplier;
 ````
 
 
-You now have the same data in both the “hive” and “tpch” catalogs. To join data between the 2 catalogs, all you need to do is specify the schema and table name for each table in your FROM clause. An example query is shown below.  Please note that when running queries through Starburst, it is recommended to include the full path to the table (i.e. \<catalog\>.\<schema\>.\<table\>) so that you can query across catalogs.
+(3) You now have the same data in both the “hive” and “tpch” catalogs. To join data between the 2 catalogs, all you need to do is specify the schema and table name for each table in your FROM clause. An example query is shown below.  Please note that when running queries through Starburst, it is recommended to include the full path to the table (i.e. \<catalog\>.\<schema\>.\<table\>) so that you can query across catalogs.
 ````
 SELECT c.cust_key, c.name, c.nationkey, n.name
 FROM hive.sep_demo.customer c
